@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title th:text="${title}"></title>
+
+<link rel="stylesheet" href="/css/styles.css">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.rtl.min.css"
+	integrity="sha384-dc2NSrAXbAkjrdm9IYrX10fQq9SDG6Vjz7nQVKdKcJl3pC+k37e7qJR5MVSCS+wR"
+	crossorigin="anonymous">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg sticky-top mynav ">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#"><img src="/Images/mylancer.png"
+				alt=""></a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#" th:href="@{/}">Home Service</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Post
+							Project</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Find Job</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#">Find
+							Freelancer</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Services</a>
+					</li>
+					<button type="button" class="btn login mx-1 my-1">Login</button>
+					<button type="button" class="btn  signin mx-1 my-1">Sign
+						In</button>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<div class="my-card">
+
+					<div
+						class="alert"
+						role="alert">
+						<p class="text-center"></p>
+					
+
+					</div>
+
+					<h1 class="text-center">Register Here!!</h1>
+
+
+					<form novalidate action="" th:action="@{/doRegister}" method="post">
+
+						<!-- name-fields -->
+						<div class="mb-3">
+
+							<label for="name_field" class="form-label">Your Name</label> <input
+								 name="name" type="text"
+								class="form-control"
+								
+								id="name_field" aria-describedby="emailHelp"
+								placeholder="Enter name here" />
+							<div class="invalid-feedback">
+								
+								Please provide a valid city.</div>
+						</div>
+
+						<!-- Email-fields -->
+
+						<div class="mb-3">
+							<label for="email_field" class="form-label">Your Email</label> <input
+								 name="email" type="email"
+								class="form-control" id="email_field"
+								aria-describedby="emailHelp" placeholder="Enter email here"
+								required />
+
+						</div>
+
+						<!-- Password-fields -->
+
+						<div class="mb-3">
+							<label for="password_field" class="form-label">Your
+								Password</label> <input name="password" type="password"
+								class="form-control" id="password_field"
+								aria-describedby="emailHelp" placeholder="Enter password here"
+								required />
+
+						</div>
+
+						<!-- user about fields -->
+
+						<div class="form-group">
+							<textarea 
+								placeholder="About your self.." name="" rows="10"
+								class="form-control"></textarea>
+						</div>
+
+
+						<!-- terms and conditions   -->
+
+						<div class="form-group form-check">
+								
+							<input name="agreement" type="checkbox" class="form-check-input"
+								id="agreement" /> 
+							<label for="agreement">Accept Terms And Conditions.. </label>
+
+						</div>
+
+
+						<!-- buttons -->
+						<div class="cards text-center">
+							<button type="submit" class="btn bg-primary text-white">Submit</button>
+							<button type="reset" class="btn bg-success text-white">Reset</button>
+
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<footer>
+		<div class="footer-menu">
+			<span>Products</span> <a href="#">website templates</a> <a href="#">websites</a>
+			<a href="#">domains</a> <a href="#">online stores</a> <a href="#">tock</a>
+			<a href="#">extension</a> <a href="#">marketing tools</a> <a href="#">email
+				marketing</a> <a href="#">scheduling</a> <a href="#">social media
+				tools</a> <a href="#">professional email</a> <a href="#">logo maker</a>
+			<a href="#">pricing</a> <a href="#">feature list</a>
+		</div>
+		<div class="footer-menu">
+			<span>customers</span> <a href="#">website examples</a> <a href="#">featured
+				customers</a> <a href="#">creators</a> <a href="#">businesses</a> <a
+				href="#">online stores</a> <a href="#">etsy sellers</a> <a href="#">restaurants</a>
+			<a href="#">artists</a> <a href="#">bloggers</a> <a href="#">photographers</a>
+			<a href="#">weddings</a> <a href="#">enterprise</a> <a href="#">students</a>
+
+		</div>
+
+		<div class="footer-menu">
+			<span>company</span> <a href="#">about</a> <a href="#">careers</a> <a
+				href="#">investor relations</a> <a href="#">our brands</a> <a
+				href="#">affiliates</a> <a href="#">press & media</a> <a href="#">terms
+				of services</a> <a href="#">privacy policy</a> <a href="#">security
+				measures</a> <a href="#">contact us</a>
+		</div>
+
+		<div class="footer-menu">
+			<span>community</span> <a href="#">help center</a> <a href="#">hire
+				an expert</a> <a href="#">forum</a> <a href="#">webinars</a> <a href="#">developer
+				platform</a> <a href="#">professionals</a>
+		</div>
+
+		<div class="footer-menu footer-menu-last">
+			<span>follow</span> <a href="#">newsroom</a> <a href="#">squarespace
+				blog</a> <a href="#">engineering blog</a> <a href="#">service status</a>
+			<a href="#">instagram</a> <a href="#">linkedin</a> <a href="#">facebook</a>
+			<a href="#">twitter</a>
+		</div>
+
+	</footer>
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

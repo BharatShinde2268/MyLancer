@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+	    
+    <title th:text="${title}"></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    
+  
+	<nav class="navbar navbar-expand-lg sticky-top mynav ">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#" th:href="@{/}"><img src="/Images/mylancer.png"
+				alt=""></a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#" th:href="@{/}">Home Service</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Post
+							Project</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Find Job</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#">Find
+							Freelancer</a></li>
+					<li class="nav-item"><a class="nav-link" href="#" th:href="@{/service}">Services</a>
+					</li>
+					<button type="button" class="btn login mx-1 my-1"> Hi:  <span th:text="${user.name}"></span></button>
+					<button type="button" class="btn  signin mx-1 my-1"><a href=""  th:href="@{/logout}"> Logout</a></button>
+					<button type="button" class="btn  signin mx-1 my-1"><a href=""  th:href="@{/user/changepassword}"> Change Password</a></button>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+	 <div th:replace="${content}"></div>
+	
+	
+	
+
+
+
+
+	<footer>
+		<div class="footer-menu">
+			<span>Products</span> <a href="#">website templates</a> <a href="#">websites</a>
+			<a href="#">domains</a> <a href="#">online stores</a> <a href="#">tock</a>
+			<a href="#">extension</a> <a href="#">marketing tools</a> <a href="#">email
+				marketing</a> <a href="#">scheduling</a> <a href="#">social media
+				tools</a> <a href="#">professional email</a> <a href="#">logo maker</a>
+			<a href="#">pricing</a> <a href="#">feature list</a>
+		</div>
+		<div class="footer-menu">
+			<span>customers</span> <a href="#">website examples</a> <a href="#">featured
+				customers</a> <a href="#">creators</a> <a href="#">businesses</a> <a
+				href="#">online stores</a> <a href="#">etsy sellers</a> <a href="#">restaurants</a>
+			<a href="#">artists</a> <a href="#">bloggers</a> <a href="#">photographers</a>
+			<a href="#">weddings</a> <a href="#">enterprise</a> <a href="#">students</a>
+
+		</div>
+
+		<div class="footer-menu">
+			<span>company</span> <a href="#">about</a> <a href="#">careers</a> <a
+				href="#">investor relations</a> <a href="#">our brands</a> <a
+				href="#">affiliates</a> <a href="#">press & media</a> <a href="#">terms
+				of services</a> <a href="#">privacy policy</a> <a href="#">security
+				measures</a> <a href="#">contact us</a>
+		</div>
+
+		<div class="footer-menu">
+			<span>community</span> <a href="#">help center</a> <a href="#">hire
+				an expert</a> <a href="#">forum</a> <a href="#">webinars</a> <a href="#">developer
+				platform</a> <a href="#">professionals</a>
+		</div>
+
+		<div class="footer-menu footer-menu-last">
+			<span>follow</span> <a href="#">newsroom</a> <a href="#">squarespace
+				blog</a> <a href="#">engineering blog</a> <a href="#">service status</a>
+			<a href="#">instagram</a> <a href="#">linkedin</a> <a href="#">facebook</a>
+			<a href="#">twitter</a>
+		</div>
+
+	</footer>
+
+
+   
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script><script th:src="@{/js/script.js}"></script>
+    
+    
+  </body>
+</html>

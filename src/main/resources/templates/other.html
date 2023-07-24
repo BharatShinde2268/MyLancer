@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title th:text="${title}"></title>
+</head>
+<body>
+	<section>
+		<!-- <div class="text-center">
+   <h2 class="font-weight-bold">Register Here!!</h2> -->
+
+
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<div class="my-card">
+
+
+						<div th:if="${session.message}" th:classappend="${session.message.type}" class="alert">
+							<p th:text="${session.message.content}"  class="text-center"></p>
+							<th:block th:text="${#session.removeAttribute('message')}"></th:block>
+
+						</div>
+
+						<h1 class="text-center font-weight-bold">Register Here!!</h1>
+
+
+						<form novalidate action="" th:action="@{/doRegister}"
+							method="post" th:object="${user}">
+
+							<!-- name-fields -->
+							<div class="mb-3">
+
+								<label for="name_field" class="form-label">Your Name</label> <input
+									name="name" type="text" class="form-control" th:classappend="${#fields.hasErrors('name') ? 'is-invalid': ''}" id="name_field"
+									aria-describedby="emailHelp" placeholder="Enter name here"
+									th:value="${user.name}" required/>
+								<div class="invalid-feedback" th:each="e : ${#fields.errors('name')}" th:text="${e}"></div>
+							</div>
+							
+							
+
+							<!-- Email-fields -->
+
+							<div class="mb-3">
+								<label for="email_field" class="form-label">Your Email</label> <input
+									name="email" type="email" class="form-control" th:classappend="${#fields.hasErrors('email') ? 'is-invalid': ''}" id="email_field"
+									aria-describedby="emailHelp" placeholder="Enter email here"
+									required th:value="${user.email}" />
+									<div class="invalid-feedback" th:each="e : ${#fields.errors('email')}" th:text="${e}"></div>
+
+							</div>
+
+							<!-- Password-fields -->
+
+							<div class="mb-3">
+								<label for="password_field" class="form-label">Your
+									Password</label> <input name="password" th:classappend="${#fields.hasErrors('password') ? 'is-invalid': ''}" type="password"
+									class="form-control" id="password_field"
+									aria-describedby="emailHelp" placeholder="Enter password here"
+									required />
+									<div class="invalid-feedback" th:each="e : ${#fields.errors('password')}" th:text="${e}"></div>
+
+							</div>
+
+							<!-- phone -fields -->
+
+							<div class="mb-3">
+								<label for="phone_field" class="form-label">Your Mobile
+									Number</label> <input name="phone" th:classappend="${#fields.hasErrors('phone') ? 'is-invalid': ''}" type="text" class="form-control"
+									id="phone_field" aria-describedby="emailHelp"
+									placeholder="Enter mobile number here" required
+									th:value="${user.phone}" />
+									<div class="invalid-feedback" th:each="e : ${#fields.errors('phone')}" th:text="${e}"></div>
+
+							</div>
+
+
+
+							<!-- user about fields -->
+
+							<div class="form-group">
+								<label for="password_field" class="form-label">Tell Me
+									About Your Self..</label>
+								<textarea placeholder="About your self.." name="about" th:classappend="${#fields.hasErrors('about') ? 'is-invalid': ''}" rows="10"
+									class="form-control" th:value="${user.about}"></textarea>
+									<div class="invalid-feedback" th:each="e : ${#fields.errors('about')}" th:text="${e}"></div>
+							</div>
+
+
+							<!-- terms and conditions   -->
+
+							<div class="form-group form-check">
+
+								<input name="agreement" type="checkbox" class="form-check-input"
+									id="agreement" /> <label for="agreement">Accept Terms
+									And Conditions.. </label>
+
+							</div>
+
+
+							<!-- buttons -->
+							<div class="cards text-center">
+								<button type="submit" class="btn bg-primary text-white">Submit</button>
+								<button type="reset" class="btn bg-success text-white">Reset</button>
+								<button class="btn bg-danger text-white">
+									<a href="" th:href="@{/login}">Alredy Register</a>
+								</button>
+
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		</div>
+
+
+
+	</section>
+
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}"></title>
+    
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.rtl.min.css" integrity="sha384-dc2NSrAXbAkjrdm9IYrX10fQq9SDG6Vjz7nQVKdKcJl3pC+k37e7qJR5MVSCS+wR" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top mynav ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="/Images/mylancer.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="" th:href="@{/}">Home Service</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Post Project</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Find Job</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Find Freelancer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <button type="button" class="btn login mx-1 my-1">Sign In</button>
+              <button type="button" class="btn   signin mx-1 my-1"><a href="" style="text-decoration: none;" th:href="@{/signup}">SignUp</a>  </button>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <header class="hero-section">
+        <h1 class="hero-section-heading">The best platform to connect potential freelancers and businesses globally.  <span></span> </h1>
+
+        <div class="hero-buttons">
+            <a href="#">Hire Freelancer</a>
+            <a class="hero-btn" href="#">Work As Freelancer</a>
+
+        </div>
+
+    </header>
+
+    <section class="about-sec">
+        <div class="about-sec-content">
+
+            <p class="about-heading">About</p>
+            <img src="/Images/UnderLine.png" alt=""  >
+            <p class="about-desc">Are you looking for a new job or freelance assignment? MayLancer is a great place to start! Our service provides a pool of skilled professionals ready to help you out. We offer freelance services ranging from Web Development, Software Development, Writing & Translation, and Design & Multimedia to Business Services like Sales and Marketing, Customer Services, Administration Support, and Networking and Information System. <br>
+
+            We believe everyone should be able to make money doing something they love, so we are committed to helping freelancers build successful careers. 
+                </p>
+        </div>
+
+        <div class="about-img">
+            <img src="/Images/about-mylancer.png" alt="" >
+        </div>
+    </section>
+
+
+    <section class="services-sec">
+        <div class="services-heading">
+            <p>Services</p>
+            <img src="/Images/UnderLine.png" alt="">
+        </div>
+
+        <div class="all-services">
+            <div class="single-service">
+                <img src="/Images/web-development.png" alt="">
+                <a href="#" class="service-btn">Web Development</a>
+            </div>
+
+            <div class="single-service">
+                <img src="/Images/Software-Development.png" alt="">
+                <a href="#" class="service-btn">Software Development </a>
+            </div>
+
+            <div class="single-service">
+                <img src="/Images/Writing-Translation.png" alt="">
+                <a href="#" class="service-btn">Writing & Translation </a>
+            </div>
+
+            <div class="single-service">
+                <img src="/Images/Design-Multimedia.png" alt="">
+                <a href="#" class="service-btn">Design & Multimedia</a>
+            </div>
+
+            <div class="single-service">
+                <img src="/Images/Business-Services.png" alt="">
+                <a href="#" class="service-btn">Business Services</a>
+            </div>
+
+            <div class="single-service">
+                <img src="/Images/Customer-Services.png" alt="">
+                <a href="#" class="service-btn">Customer Services</a>
+            </div>
+
+            <div class="single-service">
+                <img src="/Images/networking-information-system.png" alt="">
+                <a href="#" class="service-btn">Networking & Information System </a>
+            </div>
+
+            <div class="single-service">
+                <img src="/Images/Administration-Support.png" alt="">
+                <a href="#" class="service-btn">Administration Support </a>
+            </div>
+
+            <div class="single-service">
+                <img src="/Images/sales-marketing.png" alt="">
+                <a href="#" class="service-btn">Sales and Marketing</a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="how-freelancing-works">
+        <h2 class="how-freelancing-works-heading">How does freelancing work?</h2>
+        <p>Freelance workers are typically independent contractors who offer paid services on top of their existing jobs. In today’s evolving workforce, freelancers no longer need to rely on outdated models like full-time employment to earn a living. MayLancer makes it easy for anyone with an online presence to find work as a freelancer. We connect businesses that want to hire freelancers directly with those seeking freelancing opportunities. <br>
+            Our platform allows freelancers to set their own rates and choose the projects they want to complete. As a result, we have seen tremendous growth over the past few years.
+            </p>
+    </section>
+
+    <section class="testimonial-section">
+
+        <div class="testimonail-heading">
+            <h2> Testimonial</h2>
+            <img src="/Images/UnderLine.png" alt="">
+        </div>
+
+        <div id="testimonial-slider" class="carasul-testimonial ">
+            <!-- 1 -->
+            <div class="single-review testi-in">
+                <p>printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+                    five centuries, but also the</p>
+                <div class="client-profile">
+                    <img src="/Images/reviewer1.png" alt="">
+                    <p>Diana Mirza “</p>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="single-review testi-in">
+                <p>printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+                    five centuries, but also the</p>
+                <div class="client-profile">
+                    <img src="/Images/reviewer2.png" alt="">
+                    <p>Jenife Closy “</p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="single-review testi-in">
+                <p>printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+                    five centuries, but also the</p>
+                <div class="client-profile">
+                    <img src="/Images/reviewer3.png" alt="">
+                    <p>Rozyy Tiner “</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer-menu">
+            <span>Products</span>
+            <a href="#">website templates</a>
+            <a href="#">websites</a>
+            <a href="#">domains</a>
+            <a href="#">online stores</a>
+            <a href="#">tock</a>
+            <a href="#">extension</a>
+            <a href="#">marketing tools</a>
+            <a href="#">email marketing</a>
+            <a href="#">scheduling</a>
+            <a href="#">social media tools</a>
+            <a href="#">professional email</a>
+            <a href="#">logo maker</a>
+            <a href="#">pricing</a>
+            <a href="#">feature list</a>
+        </div>
+        <div class="footer-menu">
+            <span>customers</span>
+            <a href="#">website examples</a>
+            <a href="#">featured customers</a>
+            <a href="#">creators</a>
+            <a href="#">businesses</a>
+            <a href="#">online stores</a>
+            <a href="#">etsy sellers</a>
+            <a href="#">restaurants</a>
+            <a href="#">artists</a>
+            <a href="#">bloggers</a>
+            <a href="#">photographers</a>
+            <a href="#">weddings</a>
+            <a href="#">enterprise</a>
+            <a href="#">students</a>
+
+        </div>
+
+        <div class="footer-menu">
+            <span>company</span>
+            <a href="#">about</a>
+            <a href="#">careers</a>
+            <a href="#">investor relations</a>
+            <a href="#">our brands</a>
+            <a href="#">affiliates</a>
+            <a href="#">press & media</a>
+            <a href="#">terms of services</a>
+            <a href="#">privacy policy</a>
+            <a href="#">security measures</a>
+            <a href="#">contact us</a>
+        </div>
+
+        <div class="footer-menu">
+            <span>community</span>
+            <a href="#">help center</a>
+            <a href="#">hire an expert</a>
+            <a href="#">forum</a>
+            <a href="#">webinars</a>
+            <a href="#">developer platform</a>
+            <a href="#">professionals</a>
+        </div>
+
+        <div class="footer-menu footer-menu-last">
+            <span>follow</span>
+            <a href="#">newsroom</a>
+            <a href="#">squarespace blog</a>
+            <a href="#">engineering blog</a>
+            <a href="#">service status</a>
+            <a href="#">instagram</a>
+            <a href="#">linkedin</a>
+            <a href="#">facebook</a>
+            <a href="#">twitter</a>
+        </div>
+
+    </footer>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+
+</html>
